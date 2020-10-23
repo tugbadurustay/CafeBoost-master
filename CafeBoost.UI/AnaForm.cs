@@ -96,7 +96,8 @@ namespace CafeBoost.UI
                 lvwMasalar.SelectedItems[0].ImageKey = "dolu";
             }
 
-            SiparisForm frmSiparis = new SiparisForm(db, siparis, this);
+            SiparisForm frmSiparis = new SiparisForm(db, siparis);
+            frmSiparis.MasaTasindi += FrmSiparis_MasaTasindi;
             DialogResult dr = frmSiparis.ShowDialog();
 
             // new SiparisForm(db, siparis).ShowDialog();
@@ -106,6 +107,11 @@ namespace CafeBoost.UI
             {
                 lvwMasalar.SelectedItems[0].ImageKey = "bos";
             }
+        }
+
+        private void FrmSiparis_MasaTasindi(object sender, MasaTasimaEventArgs e)
+        {
+            MasaTasi(e.EskiMasaNo, e.YeniMasaNo);
         }
 
         private Siparis AktifSiparisBul(int masaNo)
@@ -127,7 +133,7 @@ namespace CafeBoost.UI
 
         }
 
-        public void MasaTasi(int kaynak, int hedef)
+        private void MasaTasi(int kaynak, int hedef)
         {
             foreach (ListViewItem lvi in lvwMasalar.Items)
             {
@@ -173,6 +179,11 @@ namespace CafeBoost.UI
         {
             string json = JsonConvert.SerializeObject(db, Formatting.Indented);
             File.WriteAllText("veri.json", json);
+        }
+
+        private void AnaForm_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
 }
