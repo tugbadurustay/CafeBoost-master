@@ -68,6 +68,8 @@
             this.lvwMasalar.Size = new System.Drawing.Size(800, 426);
             this.lvwMasalar.TabIndex = 1;
             this.lvwMasalar.UseCompatibleStateImageBehavior = false;
+            this.lvwMasalar.SelectedIndexChanged += new System.EventHandler(this.lvwMasalar_SelectedIndexChanged);
+            this.lvwMasalar.DoubleClick += new System.EventHandler(this.lvwMasalar_DoubleClick);
             // 
             // AnaForm
             // 
@@ -79,6 +81,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AnaForm";
             this.Text = "AnaForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnaForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

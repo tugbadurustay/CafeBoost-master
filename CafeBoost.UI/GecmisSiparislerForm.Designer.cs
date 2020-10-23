@@ -57,7 +57,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.dgvSiparisDetaylar);
-            this.splitContainer1.Size = new System.Drawing.Size(484, 349);
+            this.splitContainer1.Size = new System.Drawing.Size(748, 349);
             this.splitContainer1.SplitterDistance = 174;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -73,14 +73,23 @@
             // 
             // dgvSiparisler
             // 
+            this.dgvSiparisler.AllowUserToAddRows = false;
+            this.dgvSiparisler.AllowUserToDeleteRows = false;
             this.dgvSiparisler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSiparisler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSiparisler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSiparisler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSiparisler.Location = new System.Drawing.Point(0, 32);
+            this.dgvSiparisler.MultiSelect = false;
             this.dgvSiparisler.Name = "dgvSiparisler";
-            this.dgvSiparisler.Size = new System.Drawing.Size(481, 139);
+            this.dgvSiparisler.ReadOnly = true;
+            this.dgvSiparisler.RowHeadersVisible = false;
+            this.dgvSiparisler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSiparisler.Size = new System.Drawing.Size(745, 139);
             this.dgvSiparisler.TabIndex = 0;
+            this.dgvSiparisler.SelectionChanged += new System.EventHandler(this.dgvSiparisler_SelectionChanged);
             // 
             // label2
             // 
@@ -94,20 +103,28 @@
             // 
             // dgvSiparisDetaylar
             // 
+            this.dgvSiparisDetaylar.AllowUserToAddRows = false;
+            this.dgvSiparisDetaylar.AllowUserToDeleteRows = false;
             this.dgvSiparisDetaylar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSiparisDetaylar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSiparisDetaylar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSiparisDetaylar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSiparisDetaylar.Location = new System.Drawing.Point(0, 33);
+            this.dgvSiparisDetaylar.MultiSelect = false;
             this.dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
-            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(481, 135);
+            this.dgvSiparisDetaylar.ReadOnly = true;
+            this.dgvSiparisDetaylar.RowHeadersVisible = false;
+            this.dgvSiparisDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(745, 135);
             this.dgvSiparisDetaylar.TabIndex = 0;
             // 
             // GecmisSiparislerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 349);
+            this.ClientSize = new System.Drawing.Size(748, 349);
             this.Controls.Add(this.splitContainer1);
             this.MinimumSize = new System.Drawing.Size(500, 388);
             this.Name = "GecmisSiparislerForm";
